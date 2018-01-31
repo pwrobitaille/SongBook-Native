@@ -1,0 +1,11 @@
+export const EMAIL_CHANGED = 'email_changed'
+export const PASSWORD_CHANGED = 'password_changed'
+export const LOGIN_USER_SUCCESS = 'login_user_success'
+export const LOGIN_USER_FAIL = 'login_user_fail'
+export const LOGIN_USER = 'login_user'
+
+export const SONG_UPDATE = 'song_update'
+export const SONG_CREATE = 'song_create'
+export const SONGS_FETCH_SUCCESS = 'songs_fetch_success'
+export const SONG_SAVE_SUCCESS = 'songs_save_success'
+export const SELECT_SONG = 'select_song'
