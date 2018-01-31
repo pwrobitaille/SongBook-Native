@@ -5,9 +5,11 @@ import {
   View,
   LayoutAnimation
 } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 import { connect } from 'react-redux'
 import { CardSection } from './common'
 import * as actions from '../actions'
+import SongInformation from './SongInformation'
 
 class ListItem extends Component {
 
@@ -20,22 +22,18 @@ class ListItem extends Component {
 
     if (expanded) {
       return (
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {song.title}
-          </Text>
-        </CardSection>
+        <SongInformation song={song} />
       )
     }
   }
 
   render() {
     const { titleStyle } = styles
-    const { id, title } = this.props.song
+    const { uid, title } = this.props.song
 
     return (
       <TouchableWithoutFeedback
-        onPress={() => this.props.selectSong(id)}
+        onPress={() => this.props.selectSong(uid)}
       >
         <View>
           <CardSection>
@@ -58,7 +56,7 @@ const styles = {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const expanded = state.songSelectionId === ownProps.song.id
+  const expanded = state.songSelectionId === ownProps.song.uid
 
   return { expanded }
 }

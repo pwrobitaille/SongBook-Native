@@ -1,7 +1,16 @@
 import { SELECT_SONG } from '../actions/types'
 
+const INITIAL_STATE = {
+  title: '',
+  tuning: '',
+  capo: '',
+  lyrics: '',
+  tabs: '',
+  notes: ''
+}
 
-export default (state = null, action) => {
+
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SELECT_SONG:
       return action.payload
