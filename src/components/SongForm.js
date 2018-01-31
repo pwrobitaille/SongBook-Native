@@ -14,8 +14,8 @@ class SongForm extends Component {
             <Input
               label='Title'
               placeholder="Hey Jude"
-              value={this.props.name}
-              onChangeText={value => this.props.songUpdate({ prop: 'name', value })}
+              value={this.props.title}
+              onChangeText={value => this.props.songUpdate({ prop: 'title', value })}
             />
           </CardSection>
 
@@ -86,9 +86,9 @@ const styles = {
 }
 
 const mapStateToProps = (state) => {
-  const { name, phone, shift } = state.songList
+  const { title, tuning, lyrics, tabs, notes, capo } = state.songForm
 
-  return { name, phone, shift }
+  return { title, tuning, lyrics, tabs, notes, capo }
 }
 
 export default connect(mapStateToProps, { songUpdate })(SongForm)

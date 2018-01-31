@@ -5,9 +5,12 @@ import {
 } from '../actions/types'
 
 const INITIAL_STATE = {
-  name: '',
-  phone: '',
-  shift: ''
+  title: '',
+  tuning: '',
+  capo: '',
+  lyrics: '',
+  tabs: '',
+  notes: ''
 }
 
 export default (state = INITIAL_STATE, action) => {

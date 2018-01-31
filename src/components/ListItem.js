@@ -22,7 +22,7 @@ class ListItem extends Component {
       return (
         <CardSection>
           <Text style={{ flex: 1 }}>
-            {song.description}
+            {song.title}
           </Text>
         </CardSection>
       )

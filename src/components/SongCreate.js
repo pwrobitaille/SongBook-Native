@@ -31,7 +31,7 @@ class SongCreate extends Component {
 
 
 const mapStateToProps = (state) => {
-  const { title, tuning, lyrics, tabs, notes, capo } = state.songList
+  const { title, tuning, lyrics, tabs, notes, capo } = state.songForm
 
   return { title, tuning, lyrics, tabs, notes, capo }
 }

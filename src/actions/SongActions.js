@@ -9,6 +9,7 @@ import {
 } from './types';
 
 export const songUpdate = ({ prop, value }) => {
+  console.log(value);
   return {
     type: SONG_UPDATE,
     payload: { prop, value }
@@ -22,12 +23,12 @@ export const selectSong = (songId) => {
   }
 }
 
-export const songCreate = ({ name, phone, shift }) => {
+export const songCreate = ({ title, tuning, lyrics, tabs, notes, capo }) => {
   const { currentUser } = firebase.auth()
 
   return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/songs`)
-      .push({ name, phone, shift })
+      .push({ title, tuning, lyrics, tabs, notes, capo })
       .then(() => {
         dispatch({ type: SONG_CREATE })
         Actions.pop()
@@ -46,12 +47,12 @@ export const songsFetch = () => {
   }
 }
 
-export const songSave = ({ name, phone, shift, uid }) => {
+export const songSave = ({ title, tuning, lyrics, tabs, notes, capo, uid }) => {
   const { currentUser } = firebase.auth()
 
   return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/songs/${uid}`)
-      .set({ name, phone, shift })
+      .set({ title, tuning, lyrics, tabs, notes, capo })
       .then(() => {
         dispatch({ type: SONG_SAVE_SUCCESS })
         Actions.pop()
