@@ -13,10 +13,20 @@ class SplashScreen extends Component {
 
   render() {
     return(
-      <View>
-        <Text>Hello World</Text>
+      <View style={styles.splashStyles}>
+        <Text>Splash Screen</Text>
       </View>
     )
+  }
+}
+
+const styles = {
+  splashStyles: {
+    backgroundColor: "#95C5FD",
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+
   }
 }
 

@@ -1,8 +1,10 @@
 import React from 'react'
-import { Scene, Router } from 'react-native-router-flux'
+import { Scene, Router, Actions } from 'react-native-router-flux'
 import SplashScreen from './components/SplashScreen'
 import LoginForm from './components/LoginForm'
 import SongList from './components/SongList'
+import SongCreate from './components/SongCreate'
+import SongEdit from './components/SongEdit'
 
 
 const RouterComponent = () => {
@@ -25,10 +27,22 @@ const RouterComponent = () => {
 
       <Scene key="main">
         <Scene
+          rightTitle="Add"
+          onRight={() => { Actions.songCreate() }}
           key="songList"
           component={SongList}
           title="Song List"
           initial
+        />
+        <Scene
+          key="songCreate"
+          component={SongCreate}
+          title="Add Song"
+        />
+        <Scene
+          key="songEdit"
+          component={SongEdit}
+          title="Edit Song"
         />
 
       </Scene>
