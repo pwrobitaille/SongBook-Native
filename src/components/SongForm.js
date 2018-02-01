@@ -61,6 +61,7 @@ class SongForm extends Component {
               label="Tabs"
               value={this.props.tabs}
               onChangeText={value => this.props.songUpdate({ prop: 'tabs', value })}
+              dataDetectorTypes='link'
             />
           </CardSection>
 

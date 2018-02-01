@@ -9,8 +9,17 @@ import SongEdit from './components/SongEdit'
 
 const RouterComponent = () => {
   return (
-    <Router navigationBarStyle={{ backgroundColor: '#046D8B' }} >
-      <Scene key="root" hideNavBar>
+    <Router
+      navigationBarStyle={styles.navBarStyle}
+      titleStyle={styles.titleStyle}
+    >
+      <Scene
+        key="root"
+        hideNavBar
+        leftButtonTextStyle={styles.barButtonTextStyle}
+        rightButtonTextStyle={styles.barButtonTextStyle}
+        backButtonTintColor="#FFFFFF"
+      >
         <Scene key="splashScreen">
           <Scene
             key="splash"
@@ -55,6 +64,18 @@ const RouterComponent = () => {
       </Scene>
     </Router>
   )
+}
+
+const styles = {
+  navBarStyle: {
+    backgroundColor: '#046D8B',
+  },
+  titleStyle: {
+    color: 'white'
+  },
+  barButtonTextStyle: {
+    color: '#FFFFFF'
+  }
 }
 
 export default RouterComponent
