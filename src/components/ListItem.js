@@ -5,11 +5,10 @@ import {
   View,
   LayoutAnimation
 } from 'react-native'
-import { Actions } from 'react-native-router-flux'
 import { connect } from 'react-redux'
-import { CardSection } from './common'
 import * as actions from '../actions'
 import SongInformation from './SongInformation'
+import SongItemSection from './SongItemSection'
 
 class ListItem extends Component {
 
@@ -36,11 +35,11 @@ class ListItem extends Component {
         onPress={() => this.props.selectSong(uid)}
       >
         <View>
-          <CardSection>
+          <SongItemSection style={styles.cardSectionStyle}>
             <Text style={titleStyle}>
               {title}
             </Text>
-          </CardSection>
+          </SongItemSection>
           {this.renderDescription()}
       </View>
     </TouchableWithoutFeedback>
@@ -51,7 +50,12 @@ class ListItem extends Component {
 const styles = {
   titleStyle: {
     fontSize: 18,
-    paddingLeft: 15
+    paddingLeft: 20,
+    color: 'white'
+  },
+  cardSectionStyle: {
+    backgroundColor: '#6ac7b3',
+
   }
 }
 

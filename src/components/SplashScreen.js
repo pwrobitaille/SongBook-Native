@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Image } from 'react-native'
 import { Actions } from 'react-native-router-flux'
+import logo from './../../img/SongBook-Logo.png'
 
 
 class SplashScreen extends Component {
 
   componentWillMount() {
     setTimeout(function () {
-      Actions.login()
+      Actions.auth()
     }, 2000);
   }
 
   render() {
     return(
       <View style={styles.splashStyles}>
-        <Text>Splash Screen</Text>
+        <Image
+          style={{ height: 200, width: 250 }}
+          source={logo}
+        />
       </View>
     )
   }
@@ -22,7 +26,7 @@ class SplashScreen extends Component {
 
 const styles = {
   splashStyles: {
-    backgroundColor: "#95C5FD",
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,

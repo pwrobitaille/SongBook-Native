@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const CardSection = (props) => {
+const SongItemSection = (props) => {
   return (
     <View style={[styles.containerStyle, props.style]}>
       {props.children}
@@ -16,9 +16,9 @@ const styles = {
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    borderColor: '#046D8B',
+    borderColor: 'white',
     position: 'relative'
   }
 }
 
-export { CardSection }
+export default SongItemSection

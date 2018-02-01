@@ -9,21 +9,26 @@ import SongEdit from './components/SongEdit'
 
 const RouterComponent = () => {
   return (
-    <Router>
+    <Router navigationBarStyle={{ backgroundColor: '#046D8B' }} >
       <Scene key="root" hideNavBar>
-        <Scene key="auth">
+        <Scene key="splashScreen">
           <Scene
             key="splash"
             component={SplashScreen}
             initial
             hideNavBar
           />
+        </Scene>
+
+        <Scene key="auth">
           <Scene
             key="login"
             component={LoginForm}
             title="Please Login"
+            initial
+            hideNavBar
           />
-      </Scene>
+        </Scene>
 
       <Scene key="main">
         <Scene
