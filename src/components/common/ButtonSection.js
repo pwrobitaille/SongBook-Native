@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const CardSection = (props) => {
+const ButtonSection = (props) => {
   return (
     <View style={[styles.containerStyle, props.style]}>
       {props.children}
@@ -11,8 +11,8 @@ const CardSection = (props) => {
 
 const styles = {
   containerStyle: {
-    borderBottomWidth: 1,
     padding: 5,
+    marginTop: 20,
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
     flexDirection: 'row',
@@ -21,4 +21,4 @@ const styles = {
   }
 }
 
-export { CardSection }
+export { ButtonSection }

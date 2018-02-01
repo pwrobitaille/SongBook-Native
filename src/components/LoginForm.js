@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { connect } from 'react-redux'
+import logo from './../../img/SongBook-Logo.png'
 import { emailChanged, passwordChanged, loginUser } from '../actions'
-import { Card, CardSection, Input, Button, Spinner } from './common'
+import { Card, CardSection, Input, Button, Spinner, ButtonSection } from './common'
 
 class LoginForm extends Component {
 
@@ -46,33 +47,39 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <Card>
-        <CardSection>
-          <Input
-            label="Email"
-            placeholder="email@gmail.com"
-            onChangeText={this.onEmailChange.bind(this)}
-            value={this.props.email}
-          />
-        </CardSection>
+      <View style={styles.viewStyle}>
+        <Image
+          style={styles.logoStyle}
+          source={logo}
+        />
+        <Card>
+          <CardSection>
+            <Input
+              label="Email"
+              placeholder="email@gmail.com"
+              onChangeText={this.onEmailChange.bind(this)}
+              value={this.props.email}
+            />
+          </CardSection>
 
-        <CardSection>
-          <Input
-            secureTextEntry
-            label="Password"
-            placeholder="password"
-            onChangeText={this.onPasswordChange.bind(this)}
-            value={this.props.password}
-          />
-        </CardSection>
+          <CardSection>
+            <Input
+              secureTextEntry
+              label="Password"
+              placeholder="password"
+              onChangeText={this.onPasswordChange.bind(this)}
+              value={this.props.password}
+            />
+          </CardSection>
 
-        {this.renderError()}
+          {this.renderError()}
 
-        <CardSection>
-          {this.renderButton()}
-        </CardSection>
+          <ButtonSection>
+            {this.renderButton()}
+          </ButtonSection>
 
-      </Card>
+        </Card>
+      </View>
     )
   }
 }
@@ -82,6 +89,17 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
+  },
+  logoStyle: {
+    height: 200,
+    width: 250,
+    alignSelf: 'center',
+    marginBottom: 50
+  },
+  viewStyle: {
+    backgroundColor: 'white',
+    flex: 1,
+    justifyContent: 'center'
   }
 }
 

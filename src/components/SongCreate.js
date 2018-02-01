@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Card, CardSection, Button } from './common'
+import { Card, ButtonSection, Button } from './common'
 import { songUpdate, songCreate } from '../actions'
 import SongForm from './SongForm'
 
@@ -17,12 +17,12 @@ class SongCreate extends Component {
       <Card>
         <SongForm {...this.props} />
 
-        <CardSection>
+        <ButtonSection style={{ backgroundColor: 'transparent' }}>
           <Button
             text="Create"
             onPress={this.onButtonPress.bind(this)}
           />
-        </CardSection>
+        </ButtonSection>
       </Card>
     )
   }

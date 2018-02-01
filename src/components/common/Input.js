@@ -20,7 +20,7 @@ const Input = (props) => {
 
 const styles = {
   inputStyle: {
-    color: '#000',
+    color: '#046D8B',
     paddingRight: 5,
     paddingLeft: 5,
     fontSize: 18,
@@ -29,7 +29,9 @@ const styles = {
   },
   labelStyle: {
     fontSize: 18,
-    paddingLeft: 20,
+    color: '#046D8B',
+    // fontFamily: 'Domine',
+    // paddingLeft: 20,
     flex: 1
   },
   containerStyle: {

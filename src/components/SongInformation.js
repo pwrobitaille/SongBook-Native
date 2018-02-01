@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import { CardSection, Card, Button } from './common'
+import { CardSection, Card, Button, ButtonSection } from './common'
 
 class SongInformation extends Component {
 
@@ -12,41 +12,56 @@ class SongInformation extends Component {
 
   render() {
     return (
-      <Card>
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {this.props.song.tuning}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {this.props.song.capo}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {this.props.song.lyrics}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {this.props.song.tabs}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text style={{ flex: 1 }}>
-            {this.props.song.notes}
-          </Text>
-        </CardSection>
+      <View style={styles.infoBackgroundStyle}>
+        <Card>
+          <CardSection>
+            <Text style={styles.detailStyle}>
+              {this.props.song.tuning}
+            </Text>
+          </CardSection>
+          <CardSection>
+            <Text style={styles.detailStyle}>
+              {this.props.song.capo}
+            </Text>
+          </CardSection>
+          <CardSection>
+            <Text style={styles.detailStyle}>
+              {this.props.song.lyrics}
+            </Text>
+          </CardSection>
+          <CardSection>
+            <Text style={styles.detailStyle}>
+              {this.props.song.tabs}
+            </Text>
+          </CardSection>
+          <CardSection>
+            <Text style={styles.detailStyle}>
+              {this.props.song.notes}
+            </Text>
+          </CardSection>
 
-        <CardSection>
-          <Button
-            onPress={this.onRowPress.bind(this)}
-            text="Edit"
-          />
-        </CardSection>
-      </Card>
+          <ButtonSection style={styles.buttonSectionStyle}>
+            <Button
+              onPress={this.onRowPress.bind(this)}
+              text="Edit"
+            />
+          </ButtonSection>
+        </Card>
+      </View>
     )
+  }
+}
+
+const styles = {
+  detailStyle: {
+    flex: 1,
+    color: '#046D8B'
+  },
+  buttonSectionStyle: {
+    backgroundColor: 'transparent'
+  },
+  infoBackgroundStyle: {
+    // backgroundColor: '#ecbe13'
   }
 }
 
