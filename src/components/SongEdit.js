@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import SongForm from './SongForm'
 import { songUpdate, songSave, songDelete } from '../actions'
-import { Card, CardSection, Button, Confirm } from './common'
+import { Card, ButtonSection, Button, Confirm } from './common'
 
 
 class SongEdit extends Component {
@@ -36,19 +36,19 @@ class SongEdit extends Component {
       <Card>
         <ScrollView>
           <SongForm />
-          <CardSection>
+          <ButtonSection style={styles.buttonSectionStyle}>
             <Button
               onPress={this.onButtonPress.bind(this)}
               text="Save"
             />
-          </CardSection>
+          </ButtonSection>
 
-          <CardSection>
+          <ButtonSection style={{ backgroundColor: 'transparent', marginTop: 5 }}>
             <Button
               onPress={() => this.setState({ showModal: !this.state.showModal })}
               text="Delete Song"
             />
-          </CardSection>
+          </ButtonSection>
 
           <Confirm
             visible={this.state.showModal}
@@ -60,6 +60,13 @@ class SongEdit extends Component {
         </ScrollView>
       </Card>
     )
+  }
+}
+
+const styles = {
+  buttonSectionStyle: {
+    backgroundColor: 'transparent',
+    marginTop: 10
   }
 }
 

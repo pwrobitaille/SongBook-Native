@@ -33,7 +33,8 @@ class SongForm extends Component {
               Capo
             </Text>
             <Picker
-              itemStyle={{ color: '#046D8B' }}
+              style={{ height: 150 }}
+              itemStyle={{ color: '#046D8B', height: 150 }}
               selectedValue={this.props.capo}
               onValueChange={value => this.props.songUpdate({ prop: 'capo', value })}
             >

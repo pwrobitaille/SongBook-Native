@@ -5,14 +5,9 @@ import LoginForm from './components/LoginForm'
 import SongList from './components/SongList'
 import SongCreate from './components/SongCreate'
 import SongEdit from './components/SongEdit'
-import logo from './../img/SongBook-small-logo-copy.png'
 
 
 const RouterComponent = () => {
-
-  const logoImage = {
-
-  }
 
   return (
     <Router
@@ -47,8 +42,8 @@ const RouterComponent = () => {
 
       <Scene key="main">
         <Scene
-          leftButtonImage='./../img/SongBook-small-logo-copy.png'
-          leftButtonIconStyle={{ height: 50, width: 50 }}
+          // leftButtonImage={{ isStatic: true, uri: './../img/SongBook-small-logo-copy.png' }}
+          // leftButtonIconStyle={{ height: 50, width: 50 }}
           rightTitle="Add Song"
           onRight={() => { Actions.songCreate() }}
           key="songList"
