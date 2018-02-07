@@ -8,6 +8,7 @@ import SongEdit from './components/SongEdit'
 
 
 const RouterComponent = () => {
+
   return (
     <Router
       navigationBarStyle={styles.navBarStyle}
@@ -41,7 +42,9 @@ const RouterComponent = () => {
 
       <Scene key="main">
         <Scene
-          rightTitle="Add"
+          // leftButtonImage={{ isStatic: true, uri: './../img/SongBook-small-logo-copy.png' }}
+          // leftButtonIconStyle={{ height: 50, width: 50 }}
+          rightTitle="Add Song"
           onRight={() => { Actions.songCreate() }}
           key="songList"
           component={SongList}

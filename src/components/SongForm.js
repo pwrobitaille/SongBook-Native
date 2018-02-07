@@ -10,7 +10,7 @@ class SongForm extends Component {
     return (
       <ScrollView>
         <View>
-          <CardSection>
+          <CardSection style={styles.inputCardStyle}>
             <Input
               label='Title'
               placeholder="Hey Jude"
@@ -19,7 +19,7 @@ class SongForm extends Component {
             />
           </CardSection>
 
-          <CardSection>
+          <CardSection style={styles.inputCardStyle}>
             <Input
               label="Tuning"
               placeholder="Half-Step Down"
@@ -28,12 +28,13 @@ class SongForm extends Component {
             />
           </CardSection>
 
-          <CardSection style={{ flexDirection: 'column' }}>
+          <CardSection style={{ flexDirection: 'column', backgroundColor: 'transparent' }}>
             <Text style={styles.pickerTextStyle} >
               Capo
             </Text>
             <Picker
-              // style={{ flex: 1 }}
+              style={{ height: 150 }}
+              itemStyle={{ color: '#046D8B', height: 150 }}
               selectedValue={this.props.capo}
               onValueChange={value => this.props.songUpdate({ prop: 'capo', value })}
             >
@@ -48,24 +49,26 @@ class SongForm extends Component {
             </Picker>
           </CardSection>
 
-          <CardSection>
+          <CardSection style={styles.inputCardStyle}>
             <Input
               label="Lyrics"
+              placeholder="www.lyrics.com"
               value={this.props.lyrics}
               onChangeText={value => this.props.songUpdate({ prop: 'lyrics', value })}
             />
           </CardSection>
 
-          <CardSection>
+          <CardSection style={styles.inputCardStyle}>
             <Input
               label="Tabs"
+              placeholder="www.tabs.com"
               value={this.props.tabs}
               onChangeText={value => this.props.songUpdate({ prop: 'tabs', value })}
               dataDetectorTypes='link'
             />
           </CardSection>
 
-          <CardSection>
+          <CardSection style={styles.inputCardStyle}>
             <Input
               label="Notes"
               value={this.props.notes}
@@ -82,7 +85,10 @@ class SongForm extends Component {
 const styles = {
   pickerTextStyle: {
     fontSize: 18,
-    paddingLeft: 20
+    color: '#046D8B'
+  },
+  inputCardStyle: {
+    backgroundColor: 'transparent'
   }
 }
 
