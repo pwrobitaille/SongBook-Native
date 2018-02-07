@@ -5,9 +5,15 @@ import LoginForm from './components/LoginForm'
 import SongList from './components/SongList'
 import SongCreate from './components/SongCreate'
 import SongEdit from './components/SongEdit'
+import logo from './../img/SongBook-small-logo-copy.png'
 
 
 const RouterComponent = () => {
+
+  const logoImage = {
+
+  }
+
   return (
     <Router
       navigationBarStyle={styles.navBarStyle}
@@ -41,7 +47,9 @@ const RouterComponent = () => {
 
       <Scene key="main">
         <Scene
-          rightTitle="Add"
+          leftButtonImage='./../img/SongBook-small-logo-copy.png'
+          leftButtonIconStyle={{ height: 50, width: 50 }}
+          rightTitle="Add Song"
           onRight={() => { Actions.songCreate() }}
           key="songList"
           component={SongList}
