@@ -1,6 +1,6 @@
 # SongBook
 
-As a musician, I could never remember all the songs I knew how to play on the guitar so I needed an easy way to keep track of each sog, the lyrics and chords. This is where SongBook comes in. As a user you can input the song title, tuning, fret of the capo, a link to the lyrics and tabs, and any notes you have for that song.
+As a musician, I could never remember all the songs I knew how to play on the guitar. I needed an easy way to keep track of each song, lyrics and chords. This is where SongBook comes in. As a user you can input the song title, tuning, fret of the capo, a link to the lyrics and tabs, and any notes you have for that song.
 
 # Technologies Used
   * React Native
