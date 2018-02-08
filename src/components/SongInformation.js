@@ -12,29 +12,29 @@ class SongInformation extends Component {
 
   render() {
     return (
-      <View style={styles.infoBackgroundStyle}>
+      <View>
         <Card>
-          <CardSection>
+          <CardSection style={styles.infoStyle}>
             <Text style={styles.detailStyle}>
               {this.props.song.tuning}
             </Text>
           </CardSection>
-          <CardSection>
+          <CardSection style={styles.infoStyle}>
             <Text style={styles.detailStyle}>
               {this.props.song.capo}
             </Text>
           </CardSection>
-          <CardSection>
+          <CardSection style={styles.infoStyle}>
             <Text style={styles.detailStyle}>
               {this.props.song.lyrics}
             </Text>
           </CardSection>
-          <CardSection>
+          <CardSection style={styles.infoStyle}>
             <Text style={styles.detailStyle}>
               {this.props.song.tabs}
             </Text>
           </CardSection>
-          <CardSection>
+          <CardSection style={styles.infoStyle}>
             <Text style={styles.detailStyle}>
               {this.props.song.notes}
             </Text>
@@ -58,10 +58,19 @@ const styles = {
     color: '#046D8B'
   },
   buttonSectionStyle: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
   },
-  infoBackgroundStyle: {
-    // backgroundColor: '#ecbe13'
+  infoStyle: {
+    marginTop: 5,
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
   }
 }
 

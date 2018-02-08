@@ -11,6 +11,8 @@
     "lodash": "^4.17.4",
     "react": "16.2.0",
     "react-native": "0.52.1",
+    "react-native-alphabetlistview": "^0.2.0",
+    "react-native-atoz-listview": "0.0.7",
     "react-native-router-flux": "^4.0.0-beta.28",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
@@ -27,6 +29,8 @@
     "preset": "react-native"
   },
   "rnpm": {
-    "assets": ["./assets/fonts/"]
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }

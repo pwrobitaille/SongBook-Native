@@ -18,8 +18,8 @@ const styles = {
     alignSelf: 'stretch',
     backgroundColor: '#046D8B',
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'white',
+    // borderWidth: 1,
+    // borderColor: 'white',
     marginLeft: 5,
     marginRight: 5
   },
