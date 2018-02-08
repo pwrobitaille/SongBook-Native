@@ -40,7 +40,6 @@ class SongList extends Component {
   render() {
     return (
       <ScrollView>
-        <View>
           <View style={styles.logoStyles}>
             <Image
               style={{ height: 100, width: 125 }}
@@ -51,8 +50,8 @@ class SongList extends Component {
               enableEmptySections
               dataSource={this.dataSource}
               renderRow={this.renderRow}
+              style={{ paddingBottom: 10 }}
             />
-        </View>
       </ScrollView>
     )
   }
@@ -64,8 +63,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
-    marginLeft: 100,
-    marginRight: 100,
+    marginLeft: 120,
+    marginRight: 120,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,

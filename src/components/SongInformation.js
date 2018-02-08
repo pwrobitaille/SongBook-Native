@@ -55,7 +55,8 @@ class SongInformation extends Component {
 const styles = {
   detailStyle: {
     flex: 1,
-    color: '#046D8B'
+    color: '#046D8B',
+    paddingLeft: 5,
   },
   buttonSectionStyle: {
     backgroundColor: 'transparent',
@@ -65,6 +66,8 @@ const styles = {
     shadowRadius: 2,
   },
   infoStyle: {
+    marginLeft: 10,
+    marginRight: 10,
     marginTop: 5,
     borderBottomWidth: 0,
     shadowColor: '#000',

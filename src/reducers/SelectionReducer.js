@@ -6,13 +6,14 @@ const INITIAL_STATE = {
   capo: '',
   lyrics: '',
   tabs: '',
-  notes: ''
+  notes: '',
 }
 
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SELECT_SONG:
+      if (state === action.payload) return null;
       return action.payload
     default:
       return state
