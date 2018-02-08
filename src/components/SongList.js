@@ -63,7 +63,14 @@ const styles = {
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+    marginTop: 10,
+    marginLeft: 100,
+    marginRight: 100,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2
+  },
 }
 
 
