@@ -12,6 +12,7 @@
     "react": "16.2.0",
     "react-native": "0.52.1",
     "react-native-alphabetlistview": "^0.2.0",
+    "react-native-atoz-list": "^1.0.2",
     "react-native-atoz-listview": "0.0.7",
     "react-native-router-flux": "^4.0.0-beta.28",
     "react-redux": "^5.0.6",
