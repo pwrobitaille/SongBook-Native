@@ -23,17 +23,15 @@ class SongList extends Component {
     this.createDataSource(nextProps)
   }
 
-  createDataSource({ songs }) {
+  createDataSource({ sortedSongs }) {
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     })
 
-    this.dataSource = ds.cloneWithRows(songs)
-    console.log(this.dataSource);
+    this.dataSource = ds.cloneWithRows(sortedSongs)
   }
 
   renderRow(song) {
-    console.log(song);
     return <ListItem song={song} />
   }
 
@@ -76,9 +74,21 @@ const styles = {
 const mapStateToProps = state => {
   const songs = _.map(state.songList, (val, uid) => {
       return { ...val, uid }
-  })
+  });
+console.log(songs);
 
-  return { songs }
+  function compare(a, b) {
+    if (a.title < b.title) {
+      return -1
+    } if (a.title > b.title) {
+      return 1
+    }
+    return 0
+  }
+
+const sortedSongs = songs.sort(compare);
+
+  return { sortedSongs }
 }
 
 export default connect(mapStateToProps, { songsFetch })(SongList)

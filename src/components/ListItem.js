@@ -31,6 +31,7 @@ class ListItem extends Component {
     const { titleStyle } = styles
     const { uid, title } = this.props.song
 
+
     return (
       <TouchableWithoutFeedback
         onPress={() => this.props.selectSong(uid)}
