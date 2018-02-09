@@ -55,7 +55,7 @@ const styles = {
     color: 'white'
   },
   cardSectionStyle: {
-    backgroundColor: '#6ac7b3',
+    backgroundColor: '#046D8B',
     marginTop: 10,
     marginLeft: 10,
     marginRight: 10,
